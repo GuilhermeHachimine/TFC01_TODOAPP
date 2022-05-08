@@ -8,13 +8,14 @@
     android:paddingVertical="3dp">
 
     <androidx.cardview.widget.CardView
+        android:id="@+id/cvTask"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardBackgroundColor="#F44336"
         app:cardCornerRadius="5dp"
         app:elevation="2dp"
-        tools:layout_editor_absoluteX="1dp"
 
+        tools:layout_editor_absoluteX="1dp"
         tools:layout_editor_absoluteY="91dp">
 
         <LinearLayout
