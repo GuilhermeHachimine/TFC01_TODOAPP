@@ -12,7 +12,7 @@ class TaskAdapter(
     private var listener: OnClickBalloonListener? = null
     private var longListener: OnLongClickBalloonListener? = null
     fun interface OnClickBalloonListener {
-        fun onClickBalloon(message: Task)
+        fun onClickBalloon(task: Task)
     }
     fun interface OnLongClickBalloonListener {
         fun onLongClickBalloon(message: Task)
