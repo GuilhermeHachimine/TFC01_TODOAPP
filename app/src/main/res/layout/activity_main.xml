@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#424242"
     tools:context=".MainActivity">
 
     <EditText
@@ -17,6 +18,9 @@
         android:gravity="start|top"
         android:hint="@string/hint_input_task"
         android:inputType="textMultiLine"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/fabSend"
@@ -37,13 +41,11 @@
         android:id="@+id/rvTaskBoard"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
+        android:background="#303030"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
 
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <LinearLayout
@@ -66,7 +68,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:rotationY="-360"
-            android:text="@string/text_toogle" />
+            android:text="@string/text_toogle"
+            android:textColor="#FFFFFF" />
 
     </LinearLayout>
 

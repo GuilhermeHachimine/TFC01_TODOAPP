@@ -1,10 +1,13 @@
 package com.example.todoapp
 
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
+import android.widget.Switch
 import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todoapp.model.Task
@@ -12,14 +15,20 @@ import com.example.todoapp.ui.list.TaskAdapter
 
 class MainActivity : AppCompatActivity() {
     private lateinit var etxtTask: EditText
+    private lateinit var stUrgent : Switch
     private lateinit var tasks: ArrayList<Task>
     private lateinit var rvTaskBoard: RecyclerView
     private lateinit var chatMessageAdapter: TaskAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         this.etxtTask = findViewById(R.id.etxtTask)
+        this.stUrgent = findViewById(R.id.st_urgent)
         this.rvTaskBoard = findViewById(R.id.rvTaskBoard)
+
+
+
         if(savedInstanceState == null)
             this.tasks = ArrayList()
         else if(savedInstanceState.containsKey("RECOVER_MESSAGES")) {
@@ -48,10 +57,10 @@ class MainActivity : AppCompatActivity() {
     fun onClickAdd(v: View) {
         val messageText = this.etxtTask.text.toString()
         if(messageText.isNotBlank()) {
-            val msg = Task(messageText,
-                true,
-                Math.random() > 0.5)
-            this.tasks.add(msg)
+            val tsk = Task(messageText,
+                this.stUrgent.isChecked
+                )
+            this.tasks.add(tsk)
             this.chatMessageAdapter.notifyItemInserted(this.tasks.size-1)
             this.rvTaskBoard.scrollToPosition(this.tasks.size-1)
             this.etxtTask.text.clear()
