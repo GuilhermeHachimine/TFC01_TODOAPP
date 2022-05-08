@@ -1,13 +1,11 @@
 package com.example.todoapp
 
-import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.EditText
 import android.widget.Switch
 import android.widget.Toast
-import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.todoapp.model.Task
@@ -66,4 +64,14 @@ class MainActivity : AppCompatActivity() {
             this.etxtTask.text.clear()
         }
     }
+
+    fun onSwitchClick(v:View) {
+        if(this.stUrgent.isChecked) {
+            this.stUrgent.text = getResources().getString(R.string.text_toogle)
+        } else {
+            this.stUrgent.text = getResources().getString(R.string.switch_not_urgent)
+        }
+
+    }
+
 }

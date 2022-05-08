@@ -68,7 +68,8 @@
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:rotationY="-360"
-            android:text="@string/text_toogle"
+            android:text="@string/switch_not_urgent"
+            android:onClick="onSwitchClick"
             android:textColor="#FFFFFF" />
 
     </LinearLayout>

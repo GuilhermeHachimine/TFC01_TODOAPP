@@ -17,10 +17,7 @@ class TaskAdapter(
     fun interface OnLongClickBalloonListener {
         fun onLongClickBalloon(message: Task)
     }
-//    companion object {
-//        private const val SEND = 0
-//        private const val RCVD = 1
-//    }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TaskViewHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         val layoutRes = R.layout.itemview_task;
