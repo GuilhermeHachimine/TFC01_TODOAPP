@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TODOApp</string>
+    <string name="hint_input_task">Insira uma nova tarefa...</string>
+    <string name="text_toogle">urgente</string>
+    <string name="task_status">não feita</string>
+</resources>

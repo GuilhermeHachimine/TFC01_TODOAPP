@@ -1,3 +1,6 @@
 <resources>
     <string name="app_name">TODOApp</string>
+    <string name="hint_input_task">Type a new task...</string>
+    <string name="text_toogle">urgent</string>
+    <string name="task_status">not done</string>
 </resources>
